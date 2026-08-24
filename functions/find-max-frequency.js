@@ -11,7 +11,7 @@ function mostFrequent(arr){
         }
         if(count>max){
             max=count;
-            mostfrequent=arr[i]
+            mostfrequent=arr[i];
         }
     }
     return mostfrequent;
