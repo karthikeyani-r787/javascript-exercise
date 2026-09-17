@@ -1,0 +1,19 @@
+<!--Task: On button click, change the paragraph's text color to blue.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color changer</title>
+</head>
+<body>
+    <p id="msg">This is a paragraph</p>
+    <button id="changebtn" onclick="changeColor()">Change Color</button>
+    <script>
+        const msg=document.getElementById("msg");
+        function changeColor(){
+            msg.style.color = "blue";
+        }
+    </script>
+</body>
+</html>

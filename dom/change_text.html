@@ -1,0 +1,19 @@
+<!--Task: When the button is clicked, change the heading to:-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Text </title>
+</head>
+<body>
+    <h1 id="h1">Hello world</h1>
+    <button id="changetxt" onclick="changeTxt()">Change text</button>
+    <script>
+        function changeTxt(){
+            const txt = document.getElementById("h1");
+            txt.textContent = "Welcome to JavaScript DOM";
+        }
+    </script>
+</body>
+</html>
