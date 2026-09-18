@@ -1,0 +1,20 @@
+<!--Task: On button click, change the paragraph's text color to blue.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">This is the paragraph</h1>
+    <button id="btn">Click me</button>
+    <script>
+        const h1 = document.getElementById("h1");
+        const btn = document.getElementById("btn");
+        btn.addEventListener("click",function () {
+            h1.style.color = "blue";
+        })
+    </script>
+</body>
+</html>
