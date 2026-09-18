@@ -1,0 +1,31 @@
+<!--Remove Last Student-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Last Student</title>
+</head>
+<body>
+    <ul id="students">
+        <li>Arun</li>
+        <li>Priya</li>
+        <li>Kumar</li>
+    </ul>
+
+    <button id="removeBtn">Remove Last Student</button>
+
+    <script>
+        const student = document.getElementById("students");
+        const btn = document.getElementById("removeBtn");
+
+        btn.addEventListener("click" , () => {
+            const last = student.lastElementChild;
+            if(last){
+              student.removeChild(last);
+            }
+        });
+
+    </script>
+</body>
+</html>
