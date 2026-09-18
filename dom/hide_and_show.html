@@ -4,9 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hide and show</title>
 </head>
 <body>
-    
+    <p id="para">You can hide me!</p>
+
+    <button id="hideBtn">Hide</button>
+    <button id="showBtn">Show</button>
+    <script>
+
+        const para = document.getElementById("para");
+        const hide = document.getElementById("hideBtn");
+        const show = document.getElementById("showBtn");
+
+        hide.addEventListener("click" , () =>{
+            para.style.display = "none";
+        })
+
+        show.addEventListener("click" , () =>{
+            para.style.display = "block";
+        })
+
+    </script>
 </body>
 </html>
