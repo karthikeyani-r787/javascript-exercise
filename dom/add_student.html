@@ -1,0 +1,28 @@
+<!--Add a Student-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a Student</title>
+</head>
+<body>
+    <ul id="students">
+        <li>Arun</li>
+        <li>Priya</li>
+    </ul>
+
+    <button id="addBtn">Add Student</button> 
+    <script>
+        const student = document.getElementById("students");
+        const btn = document.getElementById("addBtn");
+
+        btn.addEventListener("click" , () => {
+            const li = document.createElement("li");
+            li.textContent = "kumar";
+            student.appendChild(li);
+        });
+    </script>
+
+</body>
+</html>
