@@ -1,0 +1,75 @@
+<!--Create a counter that starts at:0-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        body{
+            min-height: 100vh;
+            background:linear-gradient(yellow,lightblue,purple);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        button{
+            height: 35px;
+            width: 80px;
+            color: rgb(17, 5, 28);
+            background-color: rgb(208, 125, 198);
+            border: solid darkred 2px;
+            border-radius: 12px;
+            padding: 10;
+        }
+        h2{
+            text-align: center;
+            font-size: 50px;
+        }
+
+        #container{
+            height: 150px;
+            width: 350px;
+            border:solid black 5px;
+            text-align: center;
+            margin: 100px;
+            padding: 60px;
+            border-radius: 60px;
+            background-color: rgb(177, 171, 166);
+        }
+    </style>
+</head>
+<body>
+     <center>
+        <div id="container">
+            <h2 id="value">0</h2>
+            <button id="add" style="font-size: 25px;">+</button>
+            <button id="sub" style="font-size: 25px;">-</button>
+            <button id="reset" style="font-size: 20px;">Reset</button>
+        </div>
+     </center>
+
+    <script>
+        const value = document.getElementById("value");
+        const add = document.getElementById("add");
+        const sub = document.getElementById("sub");
+        const reset = document.getElementById("reset");
+
+        let count = 0;
+
+        add.addEventListener("click" , () => {
+            count++;
+            value.textContent = "Count : " + count;
+        });
+
+        sub.addEventListener("click" , () => {
+            count--;
+            value.textContent = "Count : " + count;
+        })
+
+        reset.addEventListener("click" , () => {
+            count = 0;
+            value.textContent = "Count : " + count;
+        })
+    </script>
+</body>
+</html>
