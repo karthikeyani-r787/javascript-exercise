@@ -1,0 +1,35 @@
+<!--Build a small To-Do List using DOM manipulation.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+</head>
+<body>
+    <input id="taskInput" type="text" placeholder="Enter your Task">
+    <button id="addTask">Add</button>
+
+    <ul id="taskList"></ul>
+
+    <script>
+        const taskInput = document.getElementById("taskInput");
+        const addTaskBtn = document.getElementById("addTask");
+        const taskList = document.getElementById("taskList");
+
+        addTaskBtn.addEventListener("click" , () => {
+            const li = document.createElement("li");
+            const deleteBtn = document.createElement("button");
+            li.textContent = taskInput.value;
+            taskList.appendChild(li);
+            taskInput.value = "";
+            deleteBtn.textContent = "Delete";
+            li.appendChild(deleteBtn);
+
+            deleteBtn.addEventListener("click" , () => { 
+                taskList.removeChild(li)
+            });
+        });
+    </script>
+</body>
+</html>
