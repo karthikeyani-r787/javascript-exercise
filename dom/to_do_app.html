@@ -69,14 +69,37 @@
         addTaskBtn.addEventListener("click" , () => {
             const li = document.createElement("li");
             const deleteBtn = document.createElement("button");
+            const completeBtn = document.createElement("button");
             li.textContent = taskInput.value;
             taskList.appendChild(li);
             taskInput.value = "";
-            if(taskInput){
-                deleteBtn.textContent = "Delete";
-                li.appendChild(deleteBtn);
-            }
+        
+            completeBtn.textContent = "Mark as Complete";
+            li.appendChild(completeBtn);
+
+            deleteBtn.textContent = "Delete";
+            li.appendChild(deleteBtn);
             
+            let completed = false;
+            completeBtn.addEventListener("click" , () => {
+                
+                if(!completed){
+                    completed = true ; 
+                    li.style.textDecoration = "line-through";
+                    completeBtn.textContent = "Completed";
+                    
+                    console.log("completed")
+                }
+                else{
+                    completed = false;
+                    li.style.textDecoration = "none";
+                    completeBtn.textContent = "Mark as Complete";
+                    
+                    console.log(" un completed")
+
+                }
+            });
+
             deleteBtn.addEventListener("click" , () => { 
                 taskList.removeChild(li)
             });
