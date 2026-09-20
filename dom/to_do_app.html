@@ -5,12 +5,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
+
+    <style>
+        body{
+            min-height: 100vh;
+            background:linear-gradient(lightblue,rgb(99, 99, 237),rgb(45, 45, 139),rgb(42, 42, 253),rgb(18, 9, 68),black);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #input{
+            text-align: center;
+            padding: 50px;
+            margin: 50px;
+            border: solid black 5px;
+            border-radius: 70px;
+            background-color: rgb(246, 205, 228);
+        }
+        #taskInput{
+            width: 300px;
+            height: 30px;
+            border: solid darkmagenta 2px;
+            border-radius: 50px;
+            background-color: rgb(209, 237, 247);
+            box-shadow: 3px 5px ;
+        }
+        #addTask{
+            padding: 3px;
+            width: 80px;
+            color: rgb(70, 21, 70);
+            font-size: 20px;
+            background-color: yellow;
+            box-shadow: 3px 3px ;
+        }
+        #tasklist{
+            border: solid black 3px;
+            padding: 10px;
+            margin: 60px;
+            background-color: rgb(246, 205, 228);
+            color: rgb(16, 8, 81);
+            border: solid black;
+            border-radius: 30px;
+        }
+    </style>
 </head>
 <body>
-    <input id="taskInput" type="text" placeholder="Enter your Task">
-    <button id="addTask">Add</button>
-
-    <ul id="taskList"></ul>
+    <div id="input">
+        <center>
+            <input id="taskInput" type="text" placeholder="Enter your Task">
+            <button id="addTask">Add</button>
+        </center>
+    </div>
+    <div id="tasklist">
+            <ul id="taskList">
+                <h2 style="text-align: center; font-size: 35px; color: black; font-family:Arial, Helvetica, sans-serif;">Your Tasks</h2>
+            </ul>
+    </div>
 
     <script>
         const taskInput = document.getElementById("taskInput");
@@ -23,9 +72,11 @@
             li.textContent = taskInput.value;
             taskList.appendChild(li);
             taskInput.value = "";
-            deleteBtn.textContent = "Delete";
-            li.appendChild(deleteBtn);
-
+            if(taskInput){
+                deleteBtn.textContent = "Delete";
+                li.appendChild(deleteBtn);
+            }
+            
             deleteBtn.addEventListener("click" , () => { 
                 taskList.removeChild(li)
             });
