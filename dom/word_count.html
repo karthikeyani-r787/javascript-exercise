@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>word Counter</title>
+</head>
+<body>
+    <center>
+    <textarea id="text"></textarea>
+    <p id="count">0</p>
+    <p id="word">0</p>
+    </center>
+    <script>
+        const text = document.getElementById("text");
+        const count = document.getElementById("count");
+        const word = document.getElementById("word");
+
+        text.addEventListener("input" , () => {
+            let words = 0;
+            count.textContent = "Length of Text is : "+text.value.length;
+            words=text.value.trim().split(" ");
+            word.textContent = words.length;
+        });
+
+    </script>
+</body>
+</html>
