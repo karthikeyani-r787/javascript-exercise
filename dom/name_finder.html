@@ -1,0 +1,35 @@
+<!--Search Student name -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student name filter</title>
+</head>
+<body>
+    <input id="searchInput" placeholder="Search student">
+
+    <ul id="studentList"></ul>
+    <script>
+        const students = [
+                    "Arun",
+                    "Priya",
+                    "Kumar",
+                    "Divya",
+                    "Rahul"
+                ];
+        const searchinput = document.getElementById("searchInput");
+        const studentlist = document.getElementById("studentList");
+        
+        searchinput.addEventListener("input" , () => {
+            const searchInput = searchinput.value;
+            const listname = createElement("li");
+
+            let name = students.filter(students.toLowerCase().includes(searchInput));
+            listname.textContent = name;
+            studentlist.appendChild(listname);
+        })        
+    </script>
+
+</body>
+</html>

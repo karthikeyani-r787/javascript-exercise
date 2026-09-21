@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Counter</title>
+</head>
+<body>
+    <center>
+    <textarea id="text"></textarea>
+    <p id="count">0</p>
+    </center>
+    <script>
+        const text = document.getElementById("text");
+        const count = document.getElementById("count");
+
+        text.addEventListener("input" , () => {
+            let word = 1;
+            count.textContent = "Length of Text is : "+text.value.length;
+        });
+
+    </script>
+</body>
+</html>
