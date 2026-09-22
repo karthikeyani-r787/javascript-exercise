@@ -18,9 +18,17 @@
 
         text.addEventListener("input" , () => {
             let words = 0;
+            let value = text.value.trim();
             count.textContent = "Length of Text is : "+text.value.length;
-            words=text.value.trim().split(" ");
-            word.textContent = words.length;
+            
+
+            if(value === ""){
+                word.textContent = 0;
+            }else{
+                let words =value.split(" ");
+                word.textContent = words.length;
+            }
+           
         });
 
     </script>
