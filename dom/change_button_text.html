@@ -1,0 +1,40 @@
+<!--Change Button Text-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Button Text</title>
+</head>
+<body id="body">
+    <button id="btn">Turn On</button>
+    <h2 id="h2">Welcome to our Webpage</h2>
+
+    <script>
+        const btn = document.getElementById("btn");
+        const body = document.getElementById("body");
+        const h2 = document.getElementById("h2");
+
+         let button = true;
+
+        btn.addEventListener("click" , () => {
+           
+            if(button){
+                button = false;
+                btn.textContent = "Turn Off";
+                body.style.backgroundColor = "black";
+                h2.style.color = "white";
+                console.log("Turn Off");
+                h2.style.textAlign = "center";
+            }else{
+                button = true;
+                btn.textContent = "Turn On";
+                body.style.backgroundColor = "white";
+                console.log("Turn On")
+                h2.style.color = "black";
+                // h2.style.textAlign = "center";
+            }
+        })
+    </script>
+</body>
+</html>
