@@ -7,18 +7,18 @@
     <title>Input Character Limit</title>
 </head>
 <body>
-    <input id="username"  >
+    <input id="username" maxlength="10" >
     <p id="count">0/10 </p>
 
     <script>
         const username = document.getElementById("username");
         const count = document.getElementById("count");
-       
+        
 
         username.addEventListener("input" , () => {
             let char = username.value.length;
             if(char<10){
-                
+        
                 count.textContent = char + "/10";
             }else{
                 count.textContent = "Your limit is reached";
